@@ -1,6 +1,6 @@
 # MSA for phylogenetic inference
 This is a workflow for reconstruction of phylogeny of ABCFs from _Firmicutes_.  For inferring trees I use `iqtree` and `RAxML`. To carry  bootstrap values over from  `RAxML` output to `iqtree` tree, OTU names must be identical as well as number of OTUs must be the same.  Requirements for sequence names and composition must be satisfied for both programs, so that they don't change OTU names or remove some sequences.  
-_ OTU  - Operational Taxonomic Unit, it is basically the same sequence name_
+_**OTU**  - Operational Taxonomic Unit, it is basically the same sequence name_  
 `iqtree` - don't care about identical sequences but replaces some symbols  like `=` or `|` with underscore `_` form the flay. `RAxML` removes identical sequences as well as incompatible symbols to newik format. To keep output trees compatible these operations have to be done beforehand - that means checking must performed just before tree inferring, i.e. after trimming. That also means that in out case we can't ete3 workflow. Let  follow now step by step recipe.  
 
 ## Sequences
